@@ -35,12 +35,6 @@
 - Fractional Knapsack
 - Activity Selection
 - Huffman Coding
-- Backtracking
-
-## N-Queens Problem
-- Sudoku Solver
-- Hamiltonian Cycle
-- Permutations and Combinations
 
 ## Others
 - Bit Manipulation Algorithms
@@ -61,19 +55,3 @@
 - Segment Tree
 - Fenwick Tree (Binary Indexed Tree)
 - Trie (Prefix Tree)
-
-Graph Structures
-Adjacency Matrix
-Adjacency List
-Graph (Directed, Undirected, Weighted)
-Hashing
-
-Hash Table
-Hash Map
-Hash Set
-Advanced Data Structures
-
-Heap (Min Heap, Max Heap)
-Disjoint Set Union (Union Find)
-B-Tree and B+ Tree
-Skip List
