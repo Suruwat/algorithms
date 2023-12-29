@@ -7,6 +7,7 @@
 - Tree Structures
 
 ## Trees
+- Binary Tree
 - AVL Tree
 - Red-Black Tree
 - Segment Tree
