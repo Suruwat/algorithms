@@ -1,3 +1,18 @@
+# Data Structures
+
+## Linear Data Structures
+- Linked List (Singly, Doubly, Circular)
+- Stack
+- Queue (Normal, Circular, Priority Queue)
+- Tree Structures
+
+## Trees
+- AVL Tree
+- Red-Black Tree
+- Segment Tree
+- Fenwick Tree (Binary Indexed Tree)
+- Trie (Prefix Tree)
+
 # Algorithms
 
 ## Sorting Algorithms
@@ -40,18 +55,3 @@
 - Bit Manipulation Algorithms
 - Recursive Algorithms
 - Tree and Graph Traversals
-
-# Data Structures
-
-## Linear Data Structures
-- Linked List (Singly, Doubly, Circular)
-- Stack
-- Queue (Normal, Circular, Priority Queue)
-- Tree Structures
-
-## Trees
-- AVL Tree
-- Red-Black Tree
-- Segment Tree
-- Fenwick Tree (Binary Indexed Tree)
-- Trie (Prefix Tree)
