@@ -1,8 +1,8 @@
 # Data Structures
 
 ## Linear Data Structures
-- Linked List (Singly, Doubly, Circular)
 - Stack
+- Linked List (Singly, Doubly, Circular)
 - Queue (Normal, Circular, Priority Queue)
 - Tree Structures
 
