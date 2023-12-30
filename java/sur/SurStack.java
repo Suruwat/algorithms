@@ -1,35 +1,41 @@
-public class SurStack {
+import java.util.ArrayList;
+import java.util.List;
+
+public class SurStack<T> {
 
     private int maxSize;
     private int currentIndex = -1;
-    private int[] store;
+    private List<T> store;
 
     public SurStack(int maxSize) {
         this.maxSize = maxSize;
-        store = new int[maxSize];
+        store = new ArrayList<>(maxSize);
     }
 
-    public void push(int val) {
+    public void push(T val) {
         if(currentIndex == maxSize) {
             throw new RuntimeException("Stack is full");
         }
 
-        store[++currentIndex] = val;
+        store.add(++currentIndex, val);
     }
 
-    public int pop() {
+    public T pop() {
         if(currentIndex == 0) {
             throw new RuntimeException("Stack is empty");
         }
 
-        return store[currentIndex--];
+        var val = store.get(currentIndex--);
+        store.remove(val);
+
+        return val;
     }
 
     public void display() {
         System.out.print("[");
         
         for(int i=0; i<=currentIndex; i++) {
-            System.out.print(store[i]);
+            System.out.print(store.get(i));
             if(i != currentIndex) {
                 System.out.print(", ");
             }
@@ -38,7 +44,7 @@ public class SurStack {
     }
 
     public static void main(String[] args) {
-        SurStack stack = new SurStack(5);
+        SurStack<Integer> stack = new SurStack<>(5);
         stack.push(1);
         stack.push(2);
         stack.push(3);
