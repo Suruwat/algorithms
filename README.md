@@ -45,14 +45,8 @@
 - Longest Common Subsequence
 - Longest Increasing Subsequence
 - Coin Change Problem
-- Edit Distance
 
 ## Greedy Algorithms
 - Fractional Knapsack
 - Activity Selection
 - Huffman Coding
-
-## Others
-- Bit Manipulation Algorithms
-- Recursive Algorithms
-- Tree and Graph Traversals
