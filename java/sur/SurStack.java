@@ -3,9 +3,9 @@ import java.util.List;
 
 public class SurStack<T> {
 
-    private int maxSize;
+    private final int maxSize;
     private int currentIndex = -1;
-    private List<T> store;
+    private final List<T> store;
 
     public SurStack(int maxSize) {
         this.maxSize = maxSize;
