@@ -1,13 +1,12 @@
-use std::fmt::{Debug, Error};
+use std::fmt::{Error, Display};
 
-#[derive(Debug)]
-pub struct Stack {
-    store: Vec<isize>,
+pub struct Stack<T: PartialOrd + Display + Copy> {
+    store: Vec<T>,
     cur_idx: i32,
     max_size: i32,
 }
 
-impl Stack {
+impl<T: PartialOrd + Display + Copy> Stack<T> {
     pub fn new(size: i32) -> Self {
         Stack {
             store: Vec::new(),
@@ -16,7 +15,7 @@ impl Stack {
         }
     }
 
-    pub fn push(&mut self, val: isize) {
+    pub fn push(&mut self, val: T) {
         if self.cur_idx >= self.max_size {
             panic!("Stack overflow");
         }
@@ -25,7 +24,7 @@ impl Stack {
         self.store.insert(self.cur_idx as usize, val);
     }
 
-    pub fn pop(&mut self) -> Result<isize, Error> {
+    pub fn pop(&mut self) -> Result<T, Error> {
         if self.cur_idx <= 0 {
             return Err(Error)
         }
@@ -42,7 +41,7 @@ impl Stack {
     pub fn display(&self) {
         print!("[");
         for i in 0..self.store.len() {
-            print!("{:?}", &self.store[i]);
+            print!("{}", &self.store[i]);
             if i != self.store.len() - 1 {
                 print!(", ");
             }

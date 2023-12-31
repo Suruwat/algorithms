@@ -1,12 +1,13 @@
-mod sur_stack;
+mod algo;
 
-use sur_stack::Stack;
+use algo::sur_stack::Stack;
+
 fn main() {
     test_stack();
 }
 
 fn test_stack() {
-    let mut stack : Stack = Stack::new(5);
+    let mut stack: Stack<i32> = Stack::new(5);
 
     stack.push(5);
     stack.push(4);

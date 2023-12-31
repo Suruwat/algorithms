@@ -6,3 +6,4 @@ __pycache__/
 /rust/Cargo.lock
 /rust/target/
 /rust/.idea
+.vscode/
