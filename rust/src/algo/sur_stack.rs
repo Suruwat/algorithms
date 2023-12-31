@@ -1,12 +1,12 @@
 use std::fmt::{Error, Display};
 
-pub struct Stack<T: PartialOrd + Display + Copy> {
+pub struct Stack<T: Display + Copy> {
     store: Vec<T>,
     cur_idx: i32,
     max_size: i32,
 }
 
-impl<T: PartialOrd + Display + Copy> Stack<T> {
+impl<T: Display + Copy> Stack<T> {
     pub fn new(size: i32) -> Self {
         Stack {
             store: Vec::new(),
