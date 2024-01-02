@@ -27,6 +27,21 @@ impl<T: PartialOrd + Display> LL<T> {
         *curr = Some(Box::new(new_node));
         self.size = self.size + 1;
     }
+
+    pub fn delete(&mut self, val: T) {
+        let mut curr = &mut self.head;
+
+        while let Some(node) = curr.take() {
+            if node.val == val {
+                *curr = node.next;
+                self.size -= 1;
+                return;
+            } else {
+                let curr_n: &mut Box<Node<T>> = curr.insert(node);
+                curr = &mut curr_n.next;
+            }
+        }
+    }
 }
 
 #[cfg(test)] 
@@ -40,5 +55,16 @@ mod tests {
         ll.insert(2);
 
         assert_eq!(3, ll.size);
+    }
+
+    #[test]
+    fn test_delete_works() {
+        let mut ll = LL::new(5);
+        ll.insert(6);
+        ll.insert(2);
+
+        ll.delete(6);
+
+        assert_eq!(2, ll.size);
     }
 }
